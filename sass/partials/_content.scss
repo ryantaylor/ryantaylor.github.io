@@ -1,0 +1,267 @@
+// _content.scss
+
+/****************/
+/* Class styles */
+/****************/
+
+.accordion-anchor {
+  outline: 0;
+}
+
+.accordion-scroll-fix {
+  display: none;
+  position: fixed;
+
+  &:target + .project-content {
+    height: $prj-height-default;
+  }
+
+  &:target + #rtaylordev-content {
+    height: $prj-height-rtaylordev;
+  }
+
+  &:target + #thingtracker-content {
+    height: $prj-height-thingtracker;
+  }
+
+  &:target + #bccancer-content {
+    height: $prj-height-bccancer;
+  }
+
+  &:target + #vault-content {
+    height: $prj-height-vault;
+  }
+
+  &:target + #flank-content {
+    height: $prj-height-flank;
+  }
+
+  &:target + #replaytools-content {
+    height: $prj-height-replaytools;
+  }
+
+  &:target + #versionswitcher-content {
+    height: $prj-height-versionswitcher;
+  }
+
+  &:target + #coh2org-content {
+    height: $prj-height-coh2org;
+  }
+
+  &:target + #crescent-content {
+    height: $prj-height-crescent;
+  }
+
+  &:target + #dublin-content {
+    height: $prj-height-dublin;
+  }
+
+  &:target + #yosemite-content {
+    height: $prj-height-yosemite;
+  }
+
+  &:target + #vvm-content {
+    height: $prj-height-vvm;
+  }
+
+  &:target + .project-content-bottom {
+    border-bottom: 5px solid $clr-accent;
+    height: 400px;
+  }
+}
+
+.aside-content {
+  color: $clr-content;
+  font-family: $font-family-base;
+  margin: 5px;
+}
+
+.aside-projects {
+  box-shadow: -3px 3px 3px $clr-accent-alt;
+  float: right;
+  height: 250px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  width: 200px;
+}
+
+.column {
+  margin: 0 auto;
+  width: $column-width;
+}
+
+.content {
+  padding: 250px 75px 50px 75px;
+}
+
+.label-tech {
+  background-color: $clr-accent;
+  border-bottom-right-radius: 10px;
+  color: $clr-neutral;
+  font-family: $font-family-alt;
+  font-size: 17px;
+  font-weight: bold;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 75px;
+}
+
+.project {
+  &-container {
+    background-color: $clr-accent-alt;
+    border-left: 5px solid $clr-accent;
+    border-top: 5px solid $clr-accent;
+    border-right: 5px solid $clr-accent;
+    margin-top: -5px;
+    min-height: 50px;
+    overflow: hidden;
+    position: relative;
+
+    &-top {
+      @extend .project-container;
+      margin-top: 0;
+    }
+  }
+
+  &-content {
+    background-color: $clr-accent-alt;
+    color: $clr-neutral;
+    font-family: $font-family-base;
+    height: 0;
+    text-align: left;
+    transition: height 0.5s ease 0s;
+    width: 100%;
+
+    &-bottom {
+      @extend .project-content;
+    }
+
+    &-main {
+      border-right: 5px solid $clr-accent;
+      display: inline;
+      float: left;
+      height: 100%;
+      width: ($column-width - 10) * 0.75 - 5px;
+    }
+
+    &-side {
+      display: inline;
+      float: right;
+      height: 100%;
+      position: relative;
+      width: ($column-width - 10) * 0.25;
+    }
+
+    &-text {
+      margin: 15px;
+      text-align: justify;
+    }
+  }
+
+  &-control {
+    border-left: 5px solid $clr-accent;
+    color: $clr-main;
+    font-size: 40px;
+    height: 100%;
+    left: $column-width - 65px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 50px;
+  }
+
+  &-date {
+    border-right: 5px solid $clr-accent;
+    color: $clr-neutral;
+    font-family: $font-family-alt;
+    height: 100%;
+    left: 125px;
+    position: absolute;
+    top: 0;
+    width: 120px;
+  }
+
+  &-header {
+    border-bottom: 5px solid $clr-accent;
+    font-family: $font-family-alt;
+    height: 50px;
+    line-height: 47px;
+    position: relative;
+    width: 100%;
+  }
+
+  &-name {
+    color: $clr-main;
+    font-size: 20px;
+    font-weight: bold;
+    left: 250px;
+    padding-left: 20px;
+    position: absolute;
+    top: 0;
+  }
+
+  &-tech {
+    color: $clr-content;
+    font: {
+      family: $font-family-alt;
+      size: 1.2em;
+    }
+    list-style-type: none;
+    margin-top: 20px;
+    text-align: center;
+    text-shadow: 5px 5px $clr-accent;
+
+    li {
+      border-bottom: 2px solid $clr-accent;
+      height: 25px;
+      padding: 5px;
+      transition: color 0.25s ease 0s;
+
+      &.last {
+        border-bottom: none;
+      }
+
+      &:hover {
+        color: $clr-main;
+      }
+    }
+  }
+}
+
+%project-type {
+  border-right: 5px solid $clr-accent;
+  box-shadow: 5px;
+  color: $clr-neutral;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 120px;
+}
+
+.project-type {
+  &-collaboration {
+    @extend %project-type;
+    background-color: orange;
+  }
+
+  &-personal {
+    @extend %project-type;
+    background-color: #093;
+  }
+
+  &-professional {
+    @extend %project-type;
+    background-color: dodgerblue;
+  }
+}
+
+.text-content {
+  color: $clr-content;
+  font-family: $font-family-base;
+  text-align: justify;
+}

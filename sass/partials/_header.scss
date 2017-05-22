@@ -1,0 +1,260 @@
+// _header.scss
+
+/******************/
+/* Element styles */
+/******************/
+
+header {
+  height: 250px;
+  left: 0;
+  min-width: $viewport-width;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+nav {
+  height: 50px;
+  min-width: $viewport-width;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  
+  ul {
+    float: left;
+    padding-left: 130px;
+    width: 100%;
+    
+    li {
+      color: $clr-neutral;
+      display: inline;
+      margin-left: -5px;
+      
+      a {
+        color: $clr-neutral;
+        display: inline-block;
+        font-family: $font-family-alt;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.5s ease 0s;
+        width: 120px;
+      }
+      
+      a:hover {
+        background-color: $clr-main;
+      }
+    }
+    
+    li:nth-child(1) {
+      a {
+        border-left: 2px solid $clr-accent;
+      }
+    }
+    
+    li:nth-child(2) {
+      a {
+        border-left: 2px solid $clr-accent;
+        border-right: 2px solid $clr-accent;
+      }
+    }
+    
+    li:nth-child(3) {
+      padding-left: 215px;
+      
+      a {
+        border-left: 2px solid $clr-accent;
+        border-right: 2px solid $clr-accent;
+      }
+    }
+    
+    li:nth-child(4) {
+      a {
+        border-right: 2px solid $clr-accent;
+      }
+    }
+  }
+}
+
+/****************/
+/* Class styles */
+/****************/
+
+.header {
+  &-left {
+    animation: type 4s steps(60, end);
+    -moz-animation: type 4s steps(60, end);
+    -webkit-animation: type 4s steps(60, end);
+    bottom: 0;
+    color: $clr-neutral;
+    font-family: $font-family-alt;
+    font-size: 30px;
+    font-weight: 400;
+    left: 50px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  &-right {
+    animation: type 4s steps(60, end);
+    -moz-animation: type 4s steps(60, end);
+    -webkit-animation: type 4s steps(60, end);
+    animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    -webkit-animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    bottom: 0;
+    color: $clr-neutral;
+    font-family: $font-family-alt;
+    font-size: 30px;
+    font-weight: 400;
+    left: 590px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    white-space: nowrap;
+
+    &-code {
+      bottom: 0;
+      color: $clr-neutral;
+      font-family: $font-family-alt;
+      font-size: 30px;
+      font-weight: 400;
+      left: 770px;
+      margin-bottom: 5px;
+      overflow: hidden;
+      position: absolute;
+      width: 30em;
+      white-space: nowrap;
+      
+      span {
+        animation: type-enhanced 64s steps(960, end) infinite;
+        -moz-animation: type-enhanced 64s steps(960, end) infinite;
+        -webkit-animation: type-enhanced 64s steps(960, end) infinite;
+        animation-delay: 2.4s;
+        -moz-animation-delay: 2.4s;
+        -webkit-animation-delay: 2.4s;
+        left: -2px;
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+
+        &:nth-child(2) {
+          animation-delay: 10.4s;
+          -moz-animation-delay: 10.4s;
+          -webkit-animation-delay: 10.4s;
+        }
+        
+        &:nth-child(3) {
+          animation-delay: 18.4s;
+          -moz-animation-delay: 18.4s;
+          -webkit-animation-delay: 18.4s;
+        }
+        
+        &:nth-child(4) {
+          animation-delay: 26.4s;
+          -moz-animation-delay: 26.4s;
+          -webkit-animation-delay: 26.4s;
+        }
+        
+        &:nth-child(5) {
+          animation-delay: 34.4s;
+          -moz-animation-delay: 34.4s;
+          -webkit-animation-delay: 34.4s;
+        }
+        
+        &:nth-child(6) {
+          animation-delay: 42.4s;
+          -moz-animation-delay: 42.4s;
+          -webkit-animation-delay: 42.4s;
+        }
+        
+        &:nth-child(7) {
+          animation-delay: 50.4s;
+          -moz-animation-delay: 50.4s;
+          -webkit-animation-delay: 50.4s;
+        }
+        
+        &:nth-child(8) {
+          animation-delay: 58.4s;
+          -moz-animation-delay: 58.4s;
+          -webkit-animation-delay: 58.4s;
+        }
+      }
+    }
+  }
+
+  &-wrapper {
+    height: inherit;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: $viewport-width;
+  }
+}
+
+.nav {
+  &-gradient-border {
+    background: $util-gradient-nav;
+    height: 2px;
+    min-width: $viewport-width;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+
+    @media (max-width: $viewport-width) {
+      background: $clr-accent;
+    }
+  }
+
+  &-wrapper {
+    height: 98px;
+    margin: 0 auto;
+    position: relative;
+    width: $viewport-width;
+
+    @media (max-width: $viewport-width) {
+      background: $clr-bg-content;
+    }
+  }
+}
+
+.photo {
+  &-headshot {
+    border: 0 none;
+    border-radius: 50%;
+    height: 160px;
+    position: relative;
+    width: 160px;
+    vertical-align: middle;
+    z-index: 2;
+  }
+
+  &-wrapper {
+    background: $clr-accent-alt;
+    border-radius: 50%;
+    height: 160px;
+    margin: 0 auto;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    top: -85px;
+    width: 160px;
+    z-index: 1;
+  }
+}
+
+.topbar {
+  background: $clr-bg-bar;
+  border-bottom: 2px solid $clr-accent;
+  height: 150px;
+  min-width: $viewport-width;
+  width: 100%;
+}

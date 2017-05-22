@@ -1,0 +1,62 @@
+// _forms.scss
+
+input {
+  height: 34px;
+}
+
+input,
+textarea {
+  background: transparent;
+  border: none;
+  color: $clr-neutral;
+  font-family: $font-family-alt;
+  font-size: 1.5em;
+  margin: 0 auto;
+  overflow: auto;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:required:invalid {
+    box-shadow: none;
+  }
+}
+
+textarea {
+  height: 136px;
+  resize: none;
+}
+
+/****************/
+/* Class styles */
+/****************/
+
+.form {
+  &-element {
+    border-bottom: 1px solid $clr-accent;
+    padding: 25px;
+    position: relative;
+  }
+
+  &-junk {
+    display: none;
+  }
+
+  &-top {
+    border-top: 1px solid $clr-accent;
+  }
+}
+
+.jsval-message {
+  color: $clr-main;
+  font-family: $font-family-base;
+  font-weight: bold;
+  opacity: 0;
+  padding-left: 24px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}

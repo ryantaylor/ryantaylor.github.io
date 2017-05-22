@@ -1,0 +1,21 @@
+// _error.scss
+
+/****************/
+/* Class styles */
+/****************/
+
+.error-code {
+  color: $clr-main;
+  display: block;
+  font-family: $font-family-alt;
+  font-size: 190px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.error-message {
+  color: $clr-content;
+  font-family: $font-family-base;
+  font-style: italic;
+  padding-bottom: 100px;
+}

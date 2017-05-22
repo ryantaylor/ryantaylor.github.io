@@ -1,0 +1,288 @@
+// main.scss
+
+@import "partials/base";
+
+@import "partials/header";
+@import "partials/content";
+@import "partials/footer";
+
+@import "partials/error";
+@import "partials/forms";
+@import "partials/animations";
+
+/********************/
+/* General elements */
+/********************/
+
+a {
+  color: lighten($clr-main, 20%);
+  text-decoration: none;
+  transition: color 0.25s ease 0s;
+
+  &:hover {
+    color: $clr-neutral;
+
+    & > .icon {
+      fill: $clr-main;
+    }
+  }
+}
+
+b {
+  color: $clr-neutral;
+}
+
+h2,
+h3 {
+  color: $clr-neutral;
+  font-family: $font-family-base;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+  font-style: italic;
+}
+
+/****************/
+/* Class styles */
+/****************/
+
+.btn {
+  background: transparent;
+  border: 2px solid $clr-main;
+  border-radius: 2px;
+  color: $clr-neutral;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family-alt;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 25px;
+  padding: 5px 15px 5px 15px;
+  transition: background 0.5s ease 0s, border-color 0.5s ease 0s;
+  vertical-align: middle;
+  width: auto;
+
+  &:hover {
+    background: $clr-main;
+    border-color: $clr-neutral;
+  }
+
+  &-fixed {
+    @extend .btn;
+    margin-top: 20px;
+    width: 90px;
+
+    &:hover {
+      background: $clr-main;
+      border-color: $clr-neutral;
+    }
+  }
+}
+
+.btn-hero {
+  @extend .btn;
+  height: 50px;
+  width: 40%;
+
+  &-text {
+    @extend .btn-hero;
+    font-size: 2.5em;
+    line-height: 50px;
+  }
+}
+
+.btn-project {
+  $btn-height: 50px;
+
+  background: transparent;
+  border-top: 5px solid $clr-accent;
+  color: $clr-neutral;
+  cursor: pointer;
+  display: inline-block;
+  font: {
+    family: $font-family-base;
+    size: 1.5em;
+  }
+  height: $btn-height;
+  line-height: 60px;
+  position: absolute;
+  transition: background 0.5s ease 0s, color 0.5s ease 0s;
+  text-align: center;
+  width: 100%;
+
+  &-rtaylordev {
+    @extend .btn-project;
+    top: $prj-height-rtaylordev - $btn-height - 10px;
+  }
+
+  &-thingtracker {
+    @extend .btn-project;
+    top: $prj-height-thingtracker - $btn-height - 10px;
+  }
+
+  &-vault {
+    @extend .btn-project;
+    top: $prj-height-vault - $btn-height - 10px;
+  }
+
+  &-flank {
+    @extend .btn-project;
+    top: $prj-height-flank - $btn-height - 10px;
+  }
+
+  &-replaytools {
+    @extend .btn-project;
+    top: $prj-height-replaytools - $btn-height - 10px;
+  }
+
+  &-versionswitcher {
+    @extend .btn-project;
+    top: $prj-height-versionswitcher - $btn-height - 10px;
+  }
+
+  &-vvm {
+    &-github {
+      @extend .btn-project;
+      top: $prj-height-vvm - $btn-height - 5px;
+    }
+
+    &-site {
+      @extend .btn-project;
+      line-height: 50px;
+      top: $prj-height-vvm - ( $btn-height * 2 ) - 10px;
+
+      &:hover {
+        color: $clr-logo-vvm;
+      }
+    }
+    
+  }
+
+  &-coh2org {
+    @extend .btn-project;
+    background: $clr-neutral;
+    top: $prj-height-coh2org - $btn-height - 10px;
+
+    &:hover {
+      background: $clr-content !important;
+    }
+  }
+
+  &-bccancer {
+    @extend .btn-project;
+    line-height: 45px;
+    top: $prj-height-bccancer - $btn-height - 10px;
+  }
+
+  &:hover {
+    background: $clr-accent;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.coming-soon {
+  color: $clr-main;
+  display: block;
+  font-family: $font-family-alt;
+  font-size: 90px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.divider {
+  background: $clr-main;
+  display: block;
+  height: 2px;
+  margin: 20px auto;
+  width: 150px;
+}
+
+.emphasis {
+  color: $clr-main;
+}
+
+%fa-hero {
+  font-size: 300px;
+  padding: 25px;
+}
+
+.fa-hero-success {
+  @extend %fa-hero;
+  color: #093;
+}
+
+.fa-hero-fail {
+  @extend %fa-hero;
+  color: $clr-main;
+}
+
+.icon {
+  fill: $clr-content;
+  height: 64px;
+  margin: 5px;
+  transition: fill 0.5s ease 0s;
+  width: 64px;
+
+  &-pdf {
+    fill: $clr-main;
+    height: 32px;
+    margin-bottom: -7px;
+    width: 32px;
+
+    &-neutral {
+      @extend .icon-pdf;
+      fill: $clr-neutral;
+      margin-bottom: -2px;
+    }
+  }
+}
+
+.icon-bar {
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.logo {
+  &-linkedin {
+    height: 50px;
+    width: 324px;
+  }
+
+  &-coh2org {
+    height: 50px;
+    width: 159px;
+  }
+
+  &-github {
+    height: 25px;
+    width: 100px;
+
+    &-hero {
+      height: 50px;
+      position: relative;
+      top: 5px;
+      width: 200px;
+    }
+  }
+
+  &-vvm {
+    font: {
+      family: $font-family-logo-vvm;
+      size: 1.2em;
+    }
+  }
+}
+
+.space {
+  display: inline-block;
+  width: 25px;
+}

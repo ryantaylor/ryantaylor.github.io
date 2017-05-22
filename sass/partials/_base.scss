@@ -1,0 +1,85 @@
+// _base.scss
+
+@import "normalize";
+@import "../modules/all";
+
+$column-width: 810px;
+$viewport-width: 960px;
+
+$prj-height-default: 400px;
+$prj-height-rtaylordev: 395px;
+$prj-height-thingtracker: 230px;
+$prj-height-bccancer: 480px;
+$prj-height-vault: 360px;
+$prj-height-flank: 275px;
+$prj-height-replaytools: 205px;
+$prj-height-versionswitcher: 275px;
+$prj-height-coh2org: 375px;
+$prj-height-crescent: 380px;
+$prj-height-dublin: 380px;
+$prj-height-yosemite: 360px;
+$prj-height-vvm: 460px;
+
+/******************/
+/* Element styles */
+/******************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background: url(/img/bg.png) repeat scroll 0 0;
+  background-color: $clr-bg;
+}
+
+/****************/
+/* Class styles */
+/****************/
+
+.no-js {
+  background-color: $clr-main;
+  color: $clr-neutral;
+  font-family: $font-family-alt;
+  font-size: 1.25em;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.wrapper {
+  background: $util-gradient-wrapper;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+  width: $viewport-width;
+
+  @media (max-width: $viewport-width) {
+    background: $clr-bg-content;
+  }
+}
+
+/*****************/
+/* Media queries */
+/*****************/
+
+/* @media (max-width: $viewport-width) {
+  .wrapper {
+    background: $clr-bg-content;
+  }
+} */
+

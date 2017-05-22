@@ -1,0 +1,29 @@
+// _footer.scss
+
+/******************/
+/* Element styles */
+/******************/
+
+footer {
+  border-top: 2px solid $clr-accent;
+  background-color: $clr-bg-bar;
+  background-image: $util-gradient-crosshatch;
+  background-size: 7px 7px;
+  color: $clr-content;
+  font-family: $font-family-base;
+  font-size: 15px;
+  font-style: italic;
+  height: 58px;
+  line-height: 55px;
+  min-width: $viewport-width;
+  text-align: center;
+  width: 100%;
+}
+
+/****************/
+/* Class styles */
+/****************/
+
+.push {
+  height: 60px;
+}

@@ -1,0 +1,21 @@
+// _animations.scss
+
+@keyframes blink {
+  to { opacity: .0 }
+}
+
+@keyframes photo-expand {
+  from { opacity: 0; }
+}
+
+@keyframes type {
+  from { width: 0; }
+  to { width: 30em; }
+}
+
+@keyframes type-enhanced {
+  0% { width: 0; }
+  6.25% { width: 30em; }
+  12.5% { width: 0; }
+  100% { width: 0; }
+}

@@ -1,0 +1,6 @@
+// _utility.scss
+
+$util-gradient-crosshatch: linear-gradient(90deg, rgba(200,10,72,.5) 50%, transparent 50%),
+linear-gradient(rgba(200,10,72,.5) 50%, transparent 50%);
+$util-gradient-wrapper:    linear-gradient(to right, rgba(0,0,0,0), $clr-bg-content 3%, $clr-bg-content 97%, rgba(0,0,0,0));
+$util-gradient-nav:        linear-gradient(to right, rgba(0,0,0,0), $clr-accent 10%, $clr-accent 90%, rgba(0,0,0,0));
